@@ -84,33 +84,166 @@
             height: 100px;
         }
 
+        @media (max-width: 450px) {
+            .nav{
+                display: none;
+            }
+
+            .logo-container{
+                width: 50%;
+            }
+
+            .logo{
+                /* display: none; */
+                /* position: absolute; */
+                top: 50%;
+                font-size: 1px;
+            }
+        }
+
+        @media(max-width: 825px) {
+            .nav{
+                padding: 0;
+            }
+
+            .empty-container{
+                width: 75%;
+                height: 50vh;
+            }
+
+            .logo-container{
+                width: 75%;
+            }
+
+            .logo{
+                /* display: none; */
+                position: absolute;
+                top: 50%;
+                font-size: 10px;
+            }
+        }
+
         .empty-container{
             width: 100%;
             height: 100vh;
         }
 
-        .content{
+        .content-container{
+            display: grid;
+
             width: 100%;
-            height: 100vh;
+
+            height: 100%;
+
+            min-height: 100vh;
 
             position: relative;
 
+            place-items: center;
+
+            background-color: #fff;
+        }
+
+
+        .content{
+            max-width: 100%;
+
+            height: 100%;
+
+            min-height: 100vh;
+
+            /* position: relative; */
+
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+                   
+            grid-gap: 50px 30px;
             background-color: #fff;
 
             padding: 0 4em;
-        }
 
-        .content-1{
-            display: flex;
-            justify-content: center;
             align-items: center;
-
-            padding: 35px;
         }
 
-        .content-1 img{
-            width: 30%;
+        .content .left-image{
+            overflow: hidden;
         }
+
+        .content .left-image .my-image{
+
+            margin-left: 100px;
+
+            width: 65%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .content .right-text .qoute{
+            padding-right: 35px;
+        }
+
+        .content .right-text .qoute p{
+            font-size: 1rem;
+            /* padding-top: 25%; */
+            line-height: 5;
+        }
+
+        .content .right-text .qoute h1{
+            font-size: 2.5em;
+
+            padding-bottom: 35px;
+        }
+
+        @media (max-width: 991px){
+            .content .right-text .qoute{
+                padding-right: 0;
+                
+            }
+
+            .content .left-image .my-image{
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px){
+            .content{
+                width: 100%;
+
+                height: 50%;
+
+                /* min-height: 100vh; */
+
+                grid-template-columns: 1fr;
+            }
+            .content .left-image .my-image{
+                width: 95%;
+            }
+        }
+
+
+
+        /* .my-image{
+            width: 55%;
+            margin-bottom: 4em;
+        } */
+
+        .content-1 p{
+            font-size: 25px;
+
+            line-height: 2;
+        }
+
+        .content-1 h1{
+            font-size: 55px;
+
+            
+        }
+
+
+
+
 
 
         .footer{
@@ -130,6 +263,7 @@
     <title>Home</title>
 </head>
 <body>
+
     <div class="nav">
         <div class="icon-left">
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
@@ -151,27 +285,29 @@
 
     <div class="empty-container"></div>
 
-    <div class="content">
+    <div class="content-container">
+        <div class="content">
 
-        <div class="content-1">
-            <img src="img/myphoto.jpg" alt="Photo">
+            <div class="left-image">
+                <img src="img/myphoto.jpg" alt="My Photo" class="my-image">
+            </div>
 
-            <div class="text">
-                <p>Reader, Programmer, Video maker.</p>
+            <div class="right-text">
+                    <div class="qoute">
+                        <p>Reader, Programmer, Video maker.</p>
 
-                <h1>
-                    The only thing that you absolutely have to know, is the location of the library.
-                </h1>
+                        <h1>
+                            The only thing that you absolutely have to know, is the location of the library.
+                        </h1>
+                    </div>
             </div>
 
         </div>
-        
-
-        
     </div>
 
     <div class="footer">
         footer
     </div>
+    
 </body>
 </html>
