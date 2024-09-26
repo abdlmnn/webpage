@@ -89,28 +89,12 @@
             .nav{
                 display: none;
             }
-            .nav .link-right{
-                /* position: absolute;     */
-                max-width: 100%;
-            }
-
-            .content-container{
-                width: 100%;
-
-                /* position: relative; */
-            }
-
-            .empty-container{
-                height: 5px;
-            }
-
             .logo{
                 display: none;
-                
             }
         }
 
-        @media (max-width: 370px) {
+        @media (max-width: 375px) {
             .nav{
                 display: flex;
                 flex-direction: column;
@@ -119,20 +103,6 @@
 
             .nav .icon-left{
                 display: none;
-            }
-
-            .logo-container{
-                width: 75%;
-                font-size: 5px;
-            }
-
-            .logo{
-                /* position: absolute; */
-                top: 20%;
-                margin-left: 25px;
-            }
-            .content .left-image .my-image{
-                width: 100%;
             }
         }
 
@@ -150,10 +120,9 @@
             }
 
             .logo{
-                /* display: none; */
-                /* position: absolute; */
-                top: 25%;
-                font-size: 10px;
+                top: 35%;
+                font-size: 5px;
+                margin-left: 10px;
             }
         }
 
@@ -245,14 +214,31 @@
             .content{
                 width: 100%;
 
-                /* height: 50%; */
-
-                /* min-height: 100vh; */
-
                 grid-template-columns: 1fr;
             }
             .content .left-image .my-image{
                 width: 95%;
+            }
+
+            .content .right-text .qoute p{
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .content .right-text .qoute h1{
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 339px){
+            .content .right-text .qoute p{
+                font-size: 5px;
+                text-align: center;
+            }
+
+            .content .right-text .qoute h1{
+                font-size: 10px;
+                text-align: center;
             }
         }
 
